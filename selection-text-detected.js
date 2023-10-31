@@ -7,10 +7,17 @@ document.addEventListener('mouseup', function(event) {
     menu.style.left = (event.clientX + window.scrollX) + 'px';
     menu.style.top = (event.clientY + window.scrollY) + 'px';
 
-    // Exibe o menu suspenso
+    // Injete o HTML do menu suspenso
+    menu.innerHTML = '<ul>' +
+                    '<li><a href="#">Opção 1</a></li>' +
+                    '<li><a href="#">Opção 2</a></li>' +
+                    '<li><a href="#">Opção 3</a></li>' +
+                    '</ul>';
+
+    // Exiba o menu suspenso
     menu.style.display = 'block';
   } else {
-    // Oculta o menu suspenso se nenhum texto estiver selecionado
+    // Oculte o menu suspenso se nenhum texto estiver selecionado
     menu.style.display = 'none';
   }
 });
