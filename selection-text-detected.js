@@ -3,6 +3,7 @@ document.addEventListener('mouseup', function(event) {
   var menu = document.getElementById('menu-suspenso');
 
   if (selectedText !== '') {
+    console.log('chegou aqui');
     // Define a posição do menu suspenso com base na posição do cursor do mouse
     menu.style.left = (event.clientX + window.scrollX) + 'px';
     menu.style.top = (event.clientY + window.scrollY) + 'px';
